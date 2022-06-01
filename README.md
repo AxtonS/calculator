@@ -5,7 +5,7 @@ Basic calculator app, part of The Odin Project lessons.
 ## Finished:  
 
 -Built add, subtract, multiply, and divide functions  
--Built an operator function that takes an operator and 2 numbers and then calls one of the operator functions on the numbers
+-Built an operator function that takes an operator and 2 numbers and then calls one of the operator functions on the numbers  
 -Created the HTML skeleton for the calculator, minimal styling, labelled all the buttons, put a display element  
 
 ## Current:  
