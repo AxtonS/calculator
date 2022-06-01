@@ -1,0 +1,26 @@
+body{
+    display: flex;
+    justify-content: center;
+}
+#calculator{
+   display: grid;
+   grid-template-columns: repeat(4, 110px);
+   grid-template-rows: 50px, repeat(4, 110px);
+   background-color: bisque;
+}
+button{
+    background-color: grey;
+    color: black;
+    font-size: 38px;
+    margin: 5px;
+    min-height: 75px;
+}
+#display{
+    border: 10px solid black;
+    border-style: solid;
+    grid-column: 1 / 5;
+    text-align: right;
+    font-size: 38px;
+    margin: 0px;
+    background-color: white;
+}

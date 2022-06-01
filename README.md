@@ -5,18 +5,14 @@ Basic calculator app, part of The Odin Project lessons.
 ## Finished:  
 
 -Built add, subtract, multiply, and divide functions  
--Built an operator function that takes an operator and 2 numbers and then calls one of the operator functions on the numbers  
+-Built an operator function that takes an operator and 2 numbers and then calls one of the operator functions on the numbers
+-Created the HTML skeleton for the calculator, minimal styling, labelled all the buttons, put a display element  
 
 ## Current:  
 
-Create a basic HTML calculator with buttons for each digit, each of the above functions and an “Equals” key.  
-a) Do not worry about wiring up the JS just yet.
-b) There should also be a display for the calculator, go ahead and fill it with some dummy numbers so you can get it looking right.  
-c) Add a “clear” button.  
+-Create the functions that populate the display when you click the number buttons… you should be storing the ‘display value’ in a variable somewhere for use in the next step.  
 
 ## To do:  
-
--Create the functions that populate the display when you click the number buttons… you should be storing the ‘display value’ in a variable somewhere for use in the next step.  
 
 -Make the calculator work! You’ll need to store the first number that is input into the calculator when a user presses an operator, and also save which operation has been chosen and then operate() on them when the user presses the “=” key.  
 a) You should already have the code that can populate the display, so once operate() has been called, update the display with the ‘solution’ to the operation.  
@@ -36,3 +32,4 @@ f) Display a snarky error message if the user tries to divide by 0… don’t le
 -Make it look nice! This is a great project to practice your CSS skills. At least make the operations a different color from the keypad buttons.  
 -Add a “backspace” button, so the user can undo if they click the wrong number.  
 -Add keyboard support!  
+-Polish the look of the calculator
