@@ -6,17 +6,16 @@ Basic calculator app, part of The Odin Project lessons.
 
 -Built add, subtract, multiply, and divide functions  
 -Built an operator function that takes an operator and 2 numbers and then calls one of the operator functions on the numbers  
--Created the HTML skeleton for the calculator, minimal styling, labelled all the buttons, put a display element  
+-Created the HTML skeleton for the calculator, minimal styling, labelled all the buttons, put a display element
+-Built the button click functions to print to display  
 
 ## Current:  
-
--Create the functions that populate the display when you click the number buttons… you should be storing the ‘display value’ in a variable somewhere for use in the next step.  
-
-## To do:  
 
 -Make the calculator work! You’ll need to store the first number that is input into the calculator when a user presses an operator, and also save which operation has been chosen and then operate() on them when the user presses the “=” key.  
 a) You should already have the code that can populate the display, so once operate() has been called, update the display with the ‘solution’ to the operation.  
 b) This is the hardest part of the project. You need to figure out how to store all the values and call the operate function with them. Don’t feel bad if it takes you a while to figure out the logic.  
+
+## To do:  
 
 -Gotchas: watch out for and fix these bugs if they show up in your code:  
 a) Users should be able to string together several operations and get the right answer, with each pair of numbers being evaluated at a time. For example, 12 + 7 - 5 * 3 = should yield 42. An example of the behavior we’re looking for would be this student solution.  
