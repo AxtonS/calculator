@@ -17,9 +17,9 @@ Update: Adding a decimal button
 -Built logic to string together functions  
 -Prevent divide by 0 crashes  
 -Added a round to 2 decimal places on big numbers  
+-Added a backspace button  
 
 ### Planned updates:  
 
--Add a backspace button  
 -Add keyboard support  
 -Polish the look of the calculator

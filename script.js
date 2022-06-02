@@ -49,6 +49,7 @@ let multiplyBtn = document.querySelector('#multiply');
 let divideBtn = document.querySelector('#divide');
 let equalsBtn = document.querySelector('#equals');
 let clearBtn = document.querySelector('#clear');
+let backBtn = document.querySelector('#backspace');
 
 display.textContent = '0';
 
@@ -334,3 +335,12 @@ clearBtn.addEventListener('click', function(){
     operator = '';
     display.textContent = '0';
 });
+backBtn.addEventListener('click', function(){
+    if(display.textContent.length !== 1) {
+        current = display.textContent.slice(0, -1);
+        display.textContent = current;
+    } else {
+        current = '0';
+        display.textContent = current;
+    }
+})
