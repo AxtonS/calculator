@@ -42,7 +42,6 @@ let sevenBtn = document.querySelector('#seven');
 let eightBtn = document.querySelector('#eight');
 let nineBtn = document.querySelector('#nine');
 let zeroBtn = document.querySelector('#zero');
-
 let addBtn = document.querySelector('#add');
 let subtractBtn = document.querySelector('#subtract');
 let multiplyBtn = document.querySelector('#multiply');
@@ -51,13 +50,6 @@ let equalsBtn = document.querySelector('#equals');
 let clearBtn = document.querySelector('#clear');
 let backBtn = document.querySelector('#backspace');
 let decimalBtn = document.querySelector('#decimal');
-
-/* let buttons = document.querySelectorAll('button');
-buttons.addEventListener('keydown', function(e) { 
-    if (e.key === ' '){
-    e.preventDefault();
-    }
-});   Trying to disable space and enter from selecting buttons */
 
 display.textContent = '0';
 
