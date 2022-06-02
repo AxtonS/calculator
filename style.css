@@ -26,6 +26,6 @@ button{
     margin: 0px;
     background-color: white;
 }
-#add, #subtract, #multiply, #clear, #equals, #divide, #backspace{
+#add, #subtract, #multiply, #clear, #equals, #divide, #backspace, #decimal{
     background-color: rgb(226, 226, 226);
 }

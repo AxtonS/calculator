@@ -5,7 +5,7 @@ Basic calculator app, part of The Odin Project lessons.
 ### Current stage:  
 
 Final build  
-Update: Adding a decimal button  
+Update: Adding keyboard support  
 
 ### Current features:  
 
@@ -21,5 +21,4 @@ Update: Adding a decimal button
 
 ### Planned updates:  
 
--Add keyboard support  
 -Polish the look of the calculator

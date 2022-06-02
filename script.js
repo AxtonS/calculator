@@ -50,6 +50,7 @@ let divideBtn = document.querySelector('#divide');
 let equalsBtn = document.querySelector('#equals');
 let clearBtn = document.querySelector('#clear');
 let backBtn = document.querySelector('#backspace');
+let decimalBtn = document.querySelector('#decimal');
 
 display.textContent = '0';
 
@@ -170,6 +171,17 @@ zeroBtn.addEventListener('click', function(){
         display.textContent = current;
     } else {
         current += '0';
+        display.textContent = current;
+    }
+});
+decimalBtn.addEventListener('click', function(){
+    if (current.length >= 20){
+        display.textContent = current;
+    } else if (current === '0'){
+        current = '0.';
+        display.textContent = current;
+    } else {
+        current += '.';
         display.textContent = current;
     }
 });
@@ -343,4 +355,4 @@ backBtn.addEventListener('click', function(){
         current = '0';
         display.textContent = current;
     }
-})
+});
