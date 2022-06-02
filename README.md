@@ -16,7 +16,7 @@ Final features:
 -Built the button click functions to print to display  
 -Built functions into operator and clear buttons  
 -Built logic to string together functions  
-
+-Prevent divide by 0 crashes  
 ### Roadmap to launch:  
 
 -Finish testing  

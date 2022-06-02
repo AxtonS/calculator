@@ -178,11 +178,15 @@ addBtn.addEventListener('click', function(){
         operator = 'add';
         display.textContent = previous;
     } else if (operator === 'divide'){
+        if(current !== '0'){
         previous = divide(previous, current);
         current = '0';
         operator = 'add';
         display.textContent = previous;
+    } else if(current === '0'){
+        display.textContent = 'I refuse to divide by 0';
     }
+}
 });
 subtractBtn.addEventListener('click', function(){
     if (operator === ''){
@@ -205,11 +209,15 @@ subtractBtn.addEventListener('click', function(){
         operator = 'subtract';
         display.textContent = previous;
     } else if (operator === 'divide'){
+        if(current !== '0'){
         previous = divide(previous, current);
         current = '0';
         operator = 'subtract';
         display.textContent = previous;
+    } else if(current === '0'){
+        display.textContent = 'I refuse to divide by 0';
     }
+}
 });
 multiplyBtn.addEventListener('click', function(){
     if (operator === ''){
@@ -232,11 +240,15 @@ multiplyBtn.addEventListener('click', function(){
         operator = 'multiply';
         display.textContent = previous;
     } else if (operator === 'divide'){
+        if(current !== '0'){
         previous = divide(previous, current);
         current = '0';
         operator = 'multiply';
         display.textContent = previous;
+    } else if(current === '0'){
+        display.textContent = 'I refuse to divide by 0';
     }
+}
 });
 divideBtn.addEventListener('click', function(){
     if (operator === ''){
@@ -259,11 +271,15 @@ divideBtn.addEventListener('click', function(){
         operator = 'divide';
         display.textContent = previous;
     } else if (operator === 'divide'){
+        if(current !== '0'){
         previous = divide(previous, current);
         current = '0';
         operator = 'divide';
         display.textContent = previous;
+    } else if(current === '0'){
+        display.textContent = 'I refuse to divide by 0';
     }
+}
 });
 equalsBtn.addEventListener('click', function(){
     if (operator === ''){
@@ -286,11 +302,15 @@ equalsBtn.addEventListener('click', function(){
         operator = '';
         display.textContent = previous;
     } else if (operator === 'divide'){
+        if(current !== '0'){
         previous = divide(previous, current);
         current = '0';
         operator = '';
         display.textContent = previous;
-    } 
+    } else if(current === '0'){
+        display.textContent = 'I refuse to divide by 0';
+    }
+}
 });
 clearBtn.addEventListener('click', function(){
     previous = '';
