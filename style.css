@@ -1,12 +1,14 @@
 body{
     display: flex;
     justify-content: center;
+    background-color: rgb(61, 61, 61);
 }
 #calculator{
    display: grid;
    grid-template-columns: repeat(4, 110px);
    grid-template-rows: 50px, repeat(4, 110px);
    background-color: bisque;
+   border: 6px solid black;
 }
 button{
     background-color: grey;
@@ -14,10 +16,11 @@ button{
     font-size: 38px;
     margin: 5px;
     min-height: 75px;
+    border: 3px solid black;
 }
 #display{
-    border: 10px solid black;
-    border-style: solid;
+    border: 3px solid black;
+    padding: 5px;
     grid-column: 1 / 5;
     text-align: right;
     font-size: 38px;
