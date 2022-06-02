@@ -1,252 +1,300 @@
-let previousValue = 0;
-let displayValue = '0';
-let previousOperator = '';
-
 function add(a, b){
-    return (a + b).toString();
-}
+    return parseFloat(a) + parseFloat(b);
+};
 function subtract(a, b){
-    return (a - b).toString();
-}
+    return parseFloat(a) - parseFloat(b);
+};
 function multiply(a, b){
-    return (a * b).toString();
-}
+    return parseFloat(a) * parseFloat(b);
+};
 function divide(a, b){
-    return (a / b).toString();
-}
-function operate(operator, a, b){
-    return operator(a, b);
-}
+    return parseFloat(a) / parseFloat(b);
+};
 
-const display = document.querySelector('#display');
-display.textContent = displayValue;
+let operator = '';
+let previous = '';
+let current = '';
 
+let display = document.querySelector('#display');
+let oneBtn = document.querySelector('#one');
+let twoBtn = document.querySelector('#two');
+let threeBtn = document.querySelector('#three');
+let fourBtn = document.querySelector('#four');
+let fiveBtn = document.querySelector('#five');
+let sixBtn = document.querySelector('#six');
+let sevenBtn = document.querySelector('#seven');
+let eightBtn = document.querySelector('#eight');
+let nineBtn = document.querySelector('#nine');
+let zeroBtn = document.querySelector('#zero');
 
-//number buttons
-const one = document.querySelector('#one');
-one.addEventListener('click', function(){
-    if(displayValue === '0'){
-        displayValue = '1';
-        display.textContent = displayValue;
-    } else if((previousOperator === 'equals')){
-        previousOperator = '';
-        displayValue = '1';
-        display.textContent = displayValue;
+let addBtn = document.querySelector('#add');
+let subtractBtn = document.querySelector('#subtract');
+let multiplyBtn = document.querySelector('#multiply');
+let divideBtn = document.querySelector('#divide');
+let equalsBtn = document.querySelector('#equals');
+let clearBtn = document.querySelector('#clear');
+
+display.textContent = '0';
+
+oneBtn.addEventListener('click', function(){
+    if (current.length >= 20){
+        display.textContent = current;
+    }
+    else if (current === '0'){
+        current = '1';
+        display.textContent = current;
     } else {
-        displayValue += '1';
-        display.textContent = displayValue;
-    } 
+        current += '1';
+        display.textContent = current;
+    }
 });
-const two = document.querySelector('#two');
-two.addEventListener('click', function(){
-    if(displayValue === '0'){
-        displayValue = '2';
-        display.textContent = displayValue;
-    } else if(previousOperator === 'equals'){
-        previousOperator = '';
-        displayValue = '2';
-        display.textContent = displayValue;
+twoBtn.addEventListener('click', function(){
+    if (current.length >= 20){
+        display.textContent = current;
+    }
+    else if (current === '0'){
+        current = '2';
+        display.textContent = current;
     } else {
-        displayValue += '2';
-        display.textContent = displayValue;
-    } 
+        current += '2';
+        display.textContent = current;
+    }
 });
-const three = document.querySelector('#three');
-three.addEventListener('click', function(){
-    if(displayValue === '0'){
-        displayValue = '3';
-        display.textContent = displayValue;
-    } else if(previousOperator === 'equals'){
-        previousOperator = '';
-        displayValue = '3';
-        display.textContent = displayValue;
+threeBtn.addEventListener('click', function(){
+    if (current.length >= 20){
+        display.textContent = current;
+    }
+    else if (current === '0'){
+        current = '3';
+        display.textContent = current;
     } else {
-        displayValue += '3';
-        display.textContent = displayValue;
-    } 
+        current += '3';
+        display.textContent = current;
+    }
 });
-const four = document.querySelector('#four');
-four.addEventListener('click', function(){
-    if(displayValue === '0'){
-        displayValue = '4';
-        display.textContent = displayValue;
-    } else if(previousOperator === 'equals'){
-        previousOperator = '';
-        displayValue = '4';
-        display.textContent = displayValue;
+fourBtn.addEventListener('click', function(){
+    if (current.length >= 20){
+        display.textContent = current;
+    }
+    else if (current === '0'){
+        current = '4';
+        display.textContent = current;
     } else {
-        displayValue += '4';
-        display.textContent = displayValue;
-    } 
+        current += '4';
+        display.textContent = current;
+    }
 });
-const five = document.querySelector('#five');
-five.addEventListener('click', function(){
-    if(displayValue === '0'){
-        displayValue = '5';
-        display.textContent = displayValue;
-    } else if(previousOperator === 'equals'){
-        previousOperator = '';
-        displayValue = '5';
-        display.textContent = displayValue;
+fiveBtn.addEventListener('click', function(){
+    if (current.length >= 20){
+        display.textContent = current;
+    }
+    else if (current === '0'){
+        current = '5';
+        display.textContent = current;
     } else {
-        displayValue += '5';
-        display.textContent = displayValue;
-    } 
+        current += '5';
+        display.textContent = current;
+    }
 });
-const six = document.querySelector('#six');
-six.addEventListener('click', function(){
-    if(displayValue === '0'){
-        displayValue = '6';
-        display.textContent = displayValue;
-    } else if(previousOperator === 'equals'){
-        previousOperator = '';
-        displayValue = '6';
-        display.textContent = displayValue;
+sixBtn.addEventListener('click', function(){
+    if (current.length >= 20){
+        display.textContent = current;
+    }
+    else if (current === '0'){
+        current = '6';
+        display.textContent = current;
     } else {
-        displayValue += '6';
-        display.textContent = displayValue;
-    } 
+        current += '6';
+        display.textContent = current;
+    }
 });
-const seven = document.querySelector('#seven');
-seven.addEventListener('click', function(){
-    if(displayValue === '0'){
-        displayValue = '7';
-        display.textContent = displayValue;
-    } else if(previousOperator === 'equals'){
-        previousOperator = '';
-        displayValue = '7';
-        display.textContent = displayValue;
+sevenBtn.addEventListener('click', function(){
+    if (current.length >= 20){
+        display.textContent = current;
+    }
+    else if (current === '0'){
+        current = '7';
+        display.textContent = current;
     } else {
-        displayValue += '7';
-        display.textContent = displayValue;
-    } 
+        current += '7';
+        display.textContent = current;
+    }
 });
-const eight = document.querySelector('#eight');
-eight.addEventListener('click', function(){
-    if(displayValue === '0'){
-        displayValue = '8';
-        display.textContent = displayValue;
-    } else if(previousOperator === 'equals'){
-        previousOperator = '';
-        displayValue = '8';
-        display.textContent = displayValue;
+eightBtn.addEventListener('click', function(){
+    if (current.length >= 20){
+        display.textContent = current;
+    }
+    else if (current === '0'){
+        current = '8';
+        display.textContent = current;
     } else {
-        displayValue += '8';
-        display.textContent = displayValue;
-    } 
+        current += '8';
+        display.textContent = current;
+    }
 });
-const nine = document.querySelector('#nine');
-nine.addEventListener('click', function(){
-    if(displayValue === '0'){
-        displayValue = '9';
-        display.textContent = displayValue;
-    } else if(previousOperator === 'equals'){
-        previousOperator = '';
-        displayValue = '9';
-        display.textContent = displayValue;
+nineBtn.addEventListener('click', function(){
+    if (current.length >= 20){
+        display.textContent = current;
+    }
+    else if (current === '0'){
+        current = '9';
+        display.textContent = current;
     } else {
-        displayValue += '9';
-        display.textContent = displayValue;
-    } 
+        current += '9';
+        display.textContent = current;
+    }
 });
-const zero = document.querySelector('#zero');
-zero.addEventListener('click', function(){
-    if(displayValue === '0'){
-        displayValue = '0';
-        display.textContent = displayValue;
-    } else if(previousOperator === 'equals'){
-        previousOperator = '';
-        displayValue = '0';
-        display.textContent = displayValue;
+zeroBtn.addEventListener('click', function(){
+    if (current.length >= 20){
+        display.textContent = current;
+    }
+    else if (current === '0'){
+        current = '0';
+        display.textContent = current;
     } else {
-        displayValue += '0';
-        display.textContent = displayValue;
-    } 
+        current += '0';
+        display.textContent = current;
+    }
 });
 
-//operator buttons
-const clear = document.querySelector('#clear');
-clear.addEventListener('click', function(){
-    previousOperator = '';
-    previousValue = '0';
-    displayValue = '0';
-    display.textContent = displayValue;
+addBtn.addEventListener('click', function(){
+    if (operator === ''){
+        previous = display.textContent;
+        current = '0';
+        operator = 'add';
+    } else if (operator === 'add'){
+        previous = add(previous, current);
+        current = '0';
+        operator = 'add';
+        display.textContent = previous;
+    } else if (operator === 'subtract'){
+        previous = subtract(previous, current);
+        current = '0';
+        operator = 'add';
+        display.textContent = previous;
+    } else if (operator === 'multiply'){
+        previous = multiply(previous, current);
+        current = '0';
+        operator = 'add';
+        display.textContent = previous;
+    } else if (operator === 'divide'){
+        previous = divide(previous, current);
+        current = '0';
+        operator = 'add';
+        display.textContent = previous;
+    }
 });
-
-const addButton = document.querySelector('#add');
-addButton.addEventListener('click', function(){
-    if(previousOperator === ''){
-        previousValue = displayValue;
-    } else {
-    const a = parseFloat(previousValue);
-    const b = parseFloat(displayValue);
-    previousValue = operate(add, a, b);    
-    } previousOperator = 'add';
-    displayValue = '0';
-    display.textContent = displayValue;
-}); 
-const subtractButton = document.querySelector('#subtract');
-subtractButton.addEventListener('click', function(){
-    if(previousOperator === ''){
-        previousValue = displayValue;
-    } else {
-    const a = parseFloat(previousValue);
-    const b = parseFloat(displayValue);
-    previousValue = operate(subtract, a, b);    
-    } previousOperator = 'subtract';
-    displayValue = '0';
-    display.textContent = displayValue;});
-const multiplyButton = document.querySelector('#multiply');
-multiplyButton.addEventListener('click', function(){
-    if(previousOperator === ''){
-        previousValue = displayValue;
-    } else {
-    const a = parseFloat(previousValue);
-    const b = parseFloat(displayValue);
-    previousValue = operate(multiply, a, b);    
-    } previousOperator = 'multiply';
-    displayValue = '0';
-    display.textContent = displayValue;
+subtractBtn.addEventListener('click', function(){
+    if (operator === ''){
+        previous = display.textContent;
+        current = '0';
+        operator = 'subtract';
+    } else if (operator === 'add'){
+        previous = add(previous, current);
+        current = '0';
+        operator = 'subtract';
+        display.textContent = previous;
+    } else if (operator === 'subtract'){
+        previous = subtract(previous, current);
+        current = '0';
+        operator = 'subtract';
+        display.textContent = previous;
+    } else if (operator === 'multiply'){
+        previous = multiply(previous, current);
+        current = '0';
+        operator = 'subtract';
+        display.textContent = previous;
+    } else if (operator === 'divide'){
+        previous = divide(previous, current);
+        current = '0';
+        operator = 'subtract';
+        display.textContent = previous;
+    }
 });
-const divideButton = document.querySelector('#divide');
-divideButton.addEventListener('click', function(){
-    if(previousOperator === ''){
-        previousValue = displayValue;
-    } else {
-    const a = parseFloat(previousValue);
-    const b = parseFloat(displayValue);
-    previousValue = operate(divide, a, b);    
-    } previousOperator = 'divide';
-    displayValue = '0';
-    display.textContent = displayValue;
+multiplyBtn.addEventListener('click', function(){
+    if (operator === ''){
+        previous = display.textContent;
+        current = '0';
+        operator = 'multiply';
+    } else if (operator === 'add'){
+        previous = add(previous, current);
+        current = '0';
+        operator = 'multiply';
+        display.textContent = previous;
+    } else if (operator === 'subtract'){
+        previous = subtract(previous, current);
+        current = '0';
+        operator = 'multiply';
+        display.textContent = previous;
+    } else if (operator === 'multiply'){
+        previous = multiply(previous, current);
+        current = '0';
+        operator = 'multiply';
+        display.textContent = previous;
+    } else if (operator === 'divide'){
+        previous = divide(previous, current);
+        current = '0';
+        operator = 'multiply';
+        display.textContent = previous;
+    }
 });
-const equalsButton = document.querySelector('#equals');
-equalsButton.addEventListener('click', function(){
-    if(previousOperator === 'equals'){
-        display.textContent = displayValue;
-    } else if(previousOperator === 'add'){
-        const a = parseFloat(previousValue);
-        const b = parseFloat(displayValue);
-        previousValue = '0';
-        displayValue = operate(add, a, b);
-        display.textContent = displayValue;
-    } else if(previousOperator === 'subtract'){
-        const a = parseFloat(previousValue);
-        const b = parseFloat(displayValue);
-        previousValue = '0';
-        displayValue = operate(subtract, a, b);
-        display.textContent = displayValue;
-    } else if(previousOperator === 'multiply'){
-        const a = parseFloat(previousValue);
-        const b = parseFloat(displayValue);
-        previousValue = '0';
-        displayValue = operate(multiply, a, b);
-        display.textContent = displayValue;
-    } else if(previousOperator === 'divide'){
-        const a = parseFloat(previousValue);
-        const b = parseFloat(displayValue);
-        previousValue = '0';
-        displayValue = operate(divide, a, b);
-        display.textContent = displayValue;
-    } previousOperator = '';
+divideBtn.addEventListener('click', function(){
+    if (operator === ''){
+        previous = display.textContent;
+        current = '0';
+        operator = 'divide';
+    } else if (operator === 'add'){
+        previous = add(previous, current);
+        current = '0';
+        operator = 'divide';
+        display.textContent = previous;
+    } else if (operator === 'subtract'){
+        previous = subtract(previous, current);
+        current = '0';
+        operator = 'divide';
+        display.textContent = previous;
+    } else if (operator === 'multiply'){
+        previous = multiply(previous, current);
+        current = '0';
+        operator = 'divide';
+        display.textContent = previous;
+    } else if (operator === 'divide'){
+        previous = divide(previous, current);
+        current = '0';
+        operator = 'divide';
+        display.textContent = previous;
+    }
+});
+equalsBtn.addEventListener('click', function(){
+    if (operator === ''){
+        previous = display.textContent;
+        current = '0'
+        operator = '';
+    } else if (operator === 'add'){
+        previous = add(previous, current);
+        current = '0';
+        operator = '';
+        display.textContent = previous;
+    } else if (operator === 'subtract'){
+        previous = subtract(previous, current);
+        current = '0';
+        operator = '';
+        display.textContent = previous;
+    } else if (operator === 'multiply'){
+        previous = multiply(previous, current);
+        current = '0';
+        operator = '';
+        display.textContent = previous;
+    } else if (operator === 'divide'){
+        previous = divide(previous, current);
+        current = '0';
+        operator = '';
+        display.textContent = previous;
+    } 
+});
+clearBtn.addEventListener('click', function(){
+    previous = '';
+    current = '';
+    operator = '';
+    display.textContent = '0';
 });
