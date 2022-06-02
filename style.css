@@ -1,33 +1,38 @@
 body{
     display: flex;
     justify-content: center;
-    background-color: rgb(61, 61, 61);
+    background-color: rgb(122, 122, 122);
 }
 #calculator{
    display: grid;
    grid-template-columns: repeat(4, 100px);
    grid-template-rows: 50px, repeat(6, 150px);
-   background-color: rgb(0, 0, 0);
-   border: 6px solid black;
+   background-color: rgb(41, 41, 41);
+   border: 6px solid rgb(41, 41, 41);
+   border-radius: 10px;
 }
 button{
-    background-color: grey;
-    color: black;
+    background-color: green;
+    color: rgb(231, 0, 231);
     font-size: 38px;
     min-height: 75px;
-    border: 3px solid black;
+    border: 3px solid rgb(41, 41, 41);
+    border-radius: 10px;
 }
 #display{
-    border: 3px solid black;
+    border: 3px solid rgb(41, 41, 41);
     padding: 5px;
     grid-column: 1 / 5;
     text-align: right;
     font-size: 38px;
     margin: 0px;
-    background-color: white;
+    background-color: rgb(211, 211, 211);
+    color: green;
+    border-radius: 5px;
 }
 #add, #subtract, #multiply, #clear, #equals, #divide, #backspace, #decimal{
-    background-color: rgb(226, 226, 226);
+    background-color: purple;
+    color: rgb(0, 207, 0);
 }
 #backspace, #zero{
     grid-column: span 2;
