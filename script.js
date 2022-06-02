@@ -28,7 +28,7 @@ one.addEventListener('click', function(){
     if(displayValue === '0'){
         displayValue = '1';
         display.textContent = displayValue;
-    } else if(previousOperator === 'equals'){
+    } else if((previousOperator === 'equals')){
         previousOperator = '';
         displayValue = '1';
         display.textContent = displayValue;
@@ -184,7 +184,7 @@ addButton.addEventListener('click', function(){
     } previousOperator = 'add';
     displayValue = '0';
     display.textContent = displayValue;
-});
+}); 
 const subtractButton = document.querySelector('#subtract');
 subtractButton.addEventListener('click', function(){
     if(previousOperator === ''){
@@ -248,5 +248,5 @@ equalsButton.addEventListener('click', function(){
         previousValue = '0';
         displayValue = operate(divide, a, b);
         display.textContent = displayValue;
-    } previousOperator = 'equals';
+    } previousOperator = '';
 });
