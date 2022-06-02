@@ -4,9 +4,8 @@ Basic calculator app, part of The Odin Project lessons.
 
 ### Current stage:  
 
-Final features:    
--Round answers to display length  
--Prevent divide by 0 crashes  
+Final build  
+Update: Adding a decimal button  
 
 ### Current features:  
 
@@ -17,13 +16,10 @@ Final features:
 -Built functions into operator and clear buttons  
 -Built logic to string together functions  
 -Prevent divide by 0 crashes  
-### Roadmap to launch:  
-
--Finish testing  
+-Added a round to 2 decimal places on big numbers  
 
 ### Planned updates:  
 
--Add a decimal button  
 -Add a backspace button  
 -Add keyboard support  
 -Polish the look of the calculator

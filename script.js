@@ -1,14 +1,30 @@
 function add(a, b){
-    return parseFloat(a) + parseFloat(b);
+    let c = parseFloat(a) + parseFloat(b);
+    if (c.length > 16){
+        c = c.toFixed(2);
+        return c;
+    } return c;
 };
 function subtract(a, b){
-    return parseFloat(a) - parseFloat(b);
+    let c = parseFloat(a) - parseFloat(b);
+    if (c.length > 16){
+        c = c.toFixed(2);
+        return c;
+    } return c;
 };
 function multiply(a, b){
-    return parseFloat(a) * parseFloat(b);
+    let c = parseFloat(a) * parseFloat(b);
+    if (c.length > 16){
+        c = c.toFixed(2);
+        return c;
+    } return c;
 };
 function divide(a, b){
-    return parseFloat(a) / parseFloat(b);
+    let c = parseFloat(a) / parseFloat(b);
+    if (c.length > 16){
+        c = c.toFixed(2);
+        return c;
+    } return c;
 };
 
 let operator = '';
