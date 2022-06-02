@@ -6,7 +6,7 @@ body{
 #calculator{
    display: grid;
    grid-template-columns: repeat(4, 100px);
-   grid-template-rows: 50px, repeat(4, 150px);
+   grid-template-rows: 50px, repeat(6, 150px);
    background-color: rgb(0, 0, 0);
    border: 6px solid black;
 }
@@ -28,4 +28,7 @@ button{
 }
 #add, #subtract, #multiply, #clear, #equals, #divide, #backspace, #decimal{
     background-color: rgb(226, 226, 226);
+}
+#backspace, #zero{
+    grid-column: span 2;
 }

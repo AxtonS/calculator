@@ -1,27 +1,27 @@
-function add(a, b){
+function add(a, b) {
     let c = parseFloat(a) + parseFloat(b);
-    if (c.length > 16){
+    if (c.length > 16) {
         c = c.toFixed(2);
         return c;
     } return c;
 };
-function subtract(a, b){
+function subtract(a, b) {
     let c = parseFloat(a) - parseFloat(b);
-    if (c.length > 16){
+    if (c.length > 16) {
         c = c.toFixed(2);
         return c;
     } return c;
 };
-function multiply(a, b){
+function multiply(a, b) {
     let c = parseFloat(a) * parseFloat(b);
-    if (c.length > 16){
+    if (c.length > 16) {
         c = c.toFixed(2);
         return c;
     } return c;
 };
-function divide(a, b){
+function divide(a, b) {
     let c = parseFloat(a) / parseFloat(b);
-    if (c.length > 16){
+    if (c.length > 16) {
         c = c.toFixed(2);
         return c;
     } return c;
@@ -52,13 +52,20 @@ let clearBtn = document.querySelector('#clear');
 let backBtn = document.querySelector('#backspace');
 let decimalBtn = document.querySelector('#decimal');
 
+/* let buttons = document.querySelectorAll('button');
+buttons.addEventListener('keydown', function(e) { 
+    if (e.key === ' '){
+    e.preventDefault();
+    }
+});   Trying to disable space and enter from selecting buttons */
+
 display.textContent = '0';
 
-oneBtn.addEventListener('click', function(){
-    if (current.length >= 20){
+oneBtn.addEventListener('click', function () {
+    if (current.length >= 20) {
         display.textContent = current;
     }
-    else if (current === '0'){
+    else if (current === '0') {
         current = '1';
         display.textContent = current;
     } else {
@@ -66,11 +73,11 @@ oneBtn.addEventListener('click', function(){
         display.textContent = current;
     }
 });
-twoBtn.addEventListener('click', function(){
-    if (current.length >= 20){
+twoBtn.addEventListener('click', function () {
+    if (current.length >= 20) {
         display.textContent = current;
     }
-    else if (current === '0'){
+    else if (current === '0') {
         current = '2';
         display.textContent = current;
     } else {
@@ -78,11 +85,11 @@ twoBtn.addEventListener('click', function(){
         display.textContent = current;
     }
 });
-threeBtn.addEventListener('click', function(){
-    if (current.length >= 20){
+threeBtn.addEventListener('click', function () {
+    if (current.length >= 20) {
         display.textContent = current;
     }
-    else if (current === '0'){
+    else if (current === '0') {
         current = '3';
         display.textContent = current;
     } else {
@@ -90,11 +97,11 @@ threeBtn.addEventListener('click', function(){
         display.textContent = current;
     }
 });
-fourBtn.addEventListener('click', function(){
-    if (current.length >= 20){
+fourBtn.addEventListener('click', function () {
+    if (current.length >= 20) {
         display.textContent = current;
     }
-    else if (current === '0'){
+    else if (current === '0') {
         current = '4';
         display.textContent = current;
     } else {
@@ -102,11 +109,11 @@ fourBtn.addEventListener('click', function(){
         display.textContent = current;
     }
 });
-fiveBtn.addEventListener('click', function(){
-    if (current.length >= 20){
+fiveBtn.addEventListener('click', function () {
+    if (current.length >= 20) {
         display.textContent = current;
     }
-    else if (current === '0'){
+    else if (current === '0') {
         current = '5';
         display.textContent = current;
     } else {
@@ -114,11 +121,11 @@ fiveBtn.addEventListener('click', function(){
         display.textContent = current;
     }
 });
-sixBtn.addEventListener('click', function(){
-    if (current.length >= 20){
+sixBtn.addEventListener('click', function () {
+    if (current.length >= 20) {
         display.textContent = current;
     }
-    else if (current === '0'){
+    else if (current === '0') {
         current = '6';
         display.textContent = current;
     } else {
@@ -126,11 +133,11 @@ sixBtn.addEventListener('click', function(){
         display.textContent = current;
     }
 });
-sevenBtn.addEventListener('click', function(){
-    if (current.length >= 20){
+sevenBtn.addEventListener('click', function () {
+    if (current.length >= 20) {
         display.textContent = current;
     }
-    else if (current === '0'){
+    else if (current === '0') {
         current = '7';
         display.textContent = current;
     } else {
@@ -138,11 +145,11 @@ sevenBtn.addEventListener('click', function(){
         display.textContent = current;
     }
 });
-eightBtn.addEventListener('click', function(){
-    if (current.length >= 20){
+eightBtn.addEventListener('click', function () {
+    if (current.length >= 20) {
         display.textContent = current;
     }
-    else if (current === '0'){
+    else if (current === '0') {
         current = '8';
         display.textContent = current;
     } else {
@@ -150,11 +157,11 @@ eightBtn.addEventListener('click', function(){
         display.textContent = current;
     }
 });
-nineBtn.addEventListener('click', function(){
-    if (current.length >= 20){
+nineBtn.addEventListener('click', function () {
+    if (current.length >= 20) {
         display.textContent = current;
     }
-    else if (current === '0'){
+    else if (current === '0') {
         current = '9';
         display.textContent = current;
     } else {
@@ -162,11 +169,11 @@ nineBtn.addEventListener('click', function(){
         display.textContent = current;
     }
 });
-zeroBtn.addEventListener('click', function(){
-    if (current.length >= 20){
+zeroBtn.addEventListener('click', function () {
+    if (current.length >= 20) {
         display.textContent = current;
     }
-    else if (current === '0'){
+    else if (current === '0') {
         current = '0';
         display.textContent = current;
     } else {
@@ -174,10 +181,12 @@ zeroBtn.addEventListener('click', function(){
         display.textContent = current;
     }
 });
-decimalBtn.addEventListener('click', function(){
-    if (current.length >= 20){
+decimalBtn.addEventListener('click', function () {
+    if (display.textContent.includes('.')) {
         display.textContent = current;
-    } else if (current === '0'){
+    } else if (current.length >= 20) {
+        display.textContent = current;
+    } else if (current === '0') {
         current = '0.';
         display.textContent = current;
     } else {
@@ -186,173 +195,462 @@ decimalBtn.addEventListener('click', function(){
     }
 });
 
-addBtn.addEventListener('click', function(){
-    if (operator === ''){
+addBtn.addEventListener('click', function () {
+    if (operator === '') {
         previous = display.textContent;
         current = '0';
         operator = 'add';
-    } else if (operator === 'add'){
+    } else if (operator === 'add') {
         previous = add(previous, current);
         current = '0';
         operator = 'add';
         display.textContent = previous;
-    } else if (operator === 'subtract'){
+    } else if (operator === 'subtract') {
         previous = subtract(previous, current);
         current = '0';
         operator = 'add';
         display.textContent = previous;
-    } else if (operator === 'multiply'){
+    } else if (operator === 'multiply') {
         previous = multiply(previous, current);
         current = '0';
         operator = 'add';
         display.textContent = previous;
-    } else if (operator === 'divide'){
-        if(current !== '0'){
-        previous = divide(previous, current);
-        current = '0';
-        operator = 'add';
-        display.textContent = previous;
-    } else if(current === '0'){
-        display.textContent = 'I refuse to divide by 0';
+    } else if (operator === 'divide') {
+        if (current !== '0') {
+            previous = divide(previous, current);
+            current = '0';
+            operator = 'add';
+            display.textContent = previous;
+        } else if (current === '0') {
+            display.textContent = 'I refuse to divide by 0';
+        }
     }
-}
 });
-subtractBtn.addEventListener('click', function(){
-    if (operator === ''){
+subtractBtn.addEventListener('click', function () {
+    if (operator === '') {
         previous = display.textContent;
         current = '0';
         operator = 'subtract';
-    } else if (operator === 'add'){
+    } else if (operator === 'add') {
         previous = add(previous, current);
         current = '0';
         operator = 'subtract';
         display.textContent = previous;
-    } else if (operator === 'subtract'){
+    } else if (operator === 'subtract') {
         previous = subtract(previous, current);
         current = '0';
         operator = 'subtract';
         display.textContent = previous;
-    } else if (operator === 'multiply'){
+    } else if (operator === 'multiply') {
         previous = multiply(previous, current);
         current = '0';
         operator = 'subtract';
         display.textContent = previous;
-    } else if (operator === 'divide'){
-        if(current !== '0'){
-        previous = divide(previous, current);
-        current = '0';
-        operator = 'subtract';
-        display.textContent = previous;
-    } else if(current === '0'){
-        display.textContent = 'I refuse to divide by 0';
+    } else if (operator === 'divide') {
+        if (current !== '0') {
+            previous = divide(previous, current);
+            current = '0';
+            operator = 'subtract';
+            display.textContent = previous;
+        } else if (current === '0') {
+            display.textContent = 'I refuse to divide by 0';
+        }
     }
-}
 });
-multiplyBtn.addEventListener('click', function(){
-    if (operator === ''){
+multiplyBtn.addEventListener('click', function () {
+    if (operator === '') {
         previous = display.textContent;
         current = '0';
         operator = 'multiply';
-    } else if (operator === 'add'){
+    } else if (operator === 'add') {
         previous = add(previous, current);
         current = '0';
         operator = 'multiply';
         display.textContent = previous;
-    } else if (operator === 'subtract'){
+    } else if (operator === 'subtract') {
         previous = subtract(previous, current);
         current = '0';
         operator = 'multiply';
         display.textContent = previous;
-    } else if (operator === 'multiply'){
+    } else if (operator === 'multiply') {
         previous = multiply(previous, current);
         current = '0';
         operator = 'multiply';
         display.textContent = previous;
-    } else if (operator === 'divide'){
-        if(current !== '0'){
-        previous = divide(previous, current);
-        current = '0';
-        operator = 'multiply';
-        display.textContent = previous;
-    } else if(current === '0'){
-        display.textContent = 'I refuse to divide by 0';
+    } else if (operator === 'divide') {
+        if (current !== '0') {
+            previous = divide(previous, current);
+            current = '0';
+            operator = 'multiply';
+            display.textContent = previous;
+        } else if (current === '0') {
+            display.textContent = 'I refuse to divide by 0';
+        }
     }
-}
 });
-divideBtn.addEventListener('click', function(){
-    if (operator === ''){
+divideBtn.addEventListener('click', function () {
+    if (operator === '') {
         previous = display.textContent;
         current = '0';
         operator = 'divide';
-    } else if (operator === 'add'){
+    } else if (operator === 'add') {
         previous = add(previous, current);
         current = '0';
         operator = 'divide';
         display.textContent = previous;
-    } else if (operator === 'subtract'){
+    } else if (operator === 'subtract') {
         previous = subtract(previous, current);
         current = '0';
         operator = 'divide';
         display.textContent = previous;
-    } else if (operator === 'multiply'){
+    } else if (operator === 'multiply') {
         previous = multiply(previous, current);
         current = '0';
         operator = 'divide';
         display.textContent = previous;
-    } else if (operator === 'divide'){
-        if(current !== '0'){
-        previous = divide(previous, current);
-        current = '0';
-        operator = 'divide';
-        display.textContent = previous;
-    } else if(current === '0'){
-        display.textContent = 'I refuse to divide by 0';
+    } else if (operator === 'divide') {
+        if (current !== '0') {
+            previous = divide(previous, current);
+            current = '0';
+            operator = 'divide';
+            display.textContent = previous;
+        } else if (current === '0') {
+            display.textContent = 'I refuse to divide by 0';
+        }
     }
-}
 });
-equalsBtn.addEventListener('click', function(){
-    if (operator === ''){
+equalsBtn.addEventListener('click', function () {
+    if (operator === '') {
         previous = display.textContent;
         current = '0'
         operator = '';
-    } else if (operator === 'add'){
+    } else if (operator === 'add') {
         previous = add(previous, current);
         current = '0';
         operator = '';
         display.textContent = previous;
-    } else if (operator === 'subtract'){
+    } else if (operator === 'subtract') {
         previous = subtract(previous, current);
         current = '0';
         operator = '';
         display.textContent = previous;
-    } else if (operator === 'multiply'){
+    } else if (operator === 'multiply') {
         previous = multiply(previous, current);
         current = '0';
         operator = '';
         display.textContent = previous;
-    } else if (operator === 'divide'){
-        if(current !== '0'){
-        previous = divide(previous, current);
-        current = '0';
-        operator = '';
-        display.textContent = previous;
-    } else if(current === '0'){
-        display.textContent = 'I refuse to divide by 0';
+    } else if (operator === 'divide') {
+        if (current !== '0') {
+            previous = divide(previous, current);
+            current = '0';
+            operator = '';
+            display.textContent = previous;
+        } else if (current === '0') {
+            display.textContent = 'I refuse to divide by 0';
+        }
     }
-}
 });
-clearBtn.addEventListener('click', function(){
+clearBtn.addEventListener('click', function () {
     previous = '';
     current = '';
     operator = '';
     display.textContent = '0';
 });
-backBtn.addEventListener('click', function(){
-    if(display.textContent.length !== 1) {
+backBtn.addEventListener('click', function () {
+    if (display.textContent.length !== 1) {
         current = display.textContent.slice(0, -1);
         display.textContent = current;
     } else {
         current = '0';
         display.textContent = current;
+    }
+});
+window.addEventListener('keydown', function (e) {
+    if (e.key === '1') {
+        if (current.length >= 20) {
+            display.textContent = current;
+        }
+        else if (current === '0') {
+            current = '1';
+            display.textContent = current;
+        } else {
+            current += '1';
+            display.textContent = current;
+        }
+    } else if (e.key === '2') {
+        if (current.length >= 20) {
+            display.textContent = current;
+        }
+        else if (current === '0') {
+            current = '2';
+            display.textContent = current;
+        } else {
+            current += '2';
+            display.textContent = current;
+        }
+    } else if (e.key === '3') {
+        if (current.length >= 20) {
+            display.textContent = current;
+        }
+        else if (current === '0') {
+            current = '3';
+            display.textContent = current;
+        } else {
+            current += '3';
+            display.textContent = current;
+        }
+    } else if (e.key === '4') {
+        if (current.length >= 20) {
+            display.textContent = current;
+        }
+        else if (current === '0') {
+            current = '4';
+            display.textContent = current;
+        } else {
+            current += '4';
+            display.textContent = current;
+        }
+    } else if (e.key === '5') {
+        if (current.length >= 20) {
+            display.textContent = current;
+        }
+        else if (current === '0') {
+            current = '5';
+            display.textContent = current;
+        } else {
+            current += '5';
+            display.textContent = current;
+        }
+    } else if (e.key === '6') {
+        if (current.length >= 20) {
+            display.textContent = current;
+        }
+        else if (current === '0') {
+            current = '6';
+            display.textContent = current;
+        } else {
+            current += '6';
+            display.textContent = current;
+        }
+    } else if (e.key === '7') {
+        if (current.length >= 20) {
+            display.textContent = current;
+        }
+        else if (current === '0') {
+            current = '7';
+            display.textContent = current;
+        } else {
+            current += '7';
+            display.textContent = current;
+        }
+    } else if (e.key === '8') {
+        if (current.length >= 20) {
+            display.textContent = current;
+        }
+        else if (current === '0') {
+            current = '8';
+            display.textContent = current;
+        } else {
+            current += '8';
+            display.textContent = current;
+        }
+    } else if (e.key === '9') {
+        if (current.length >= 20) {
+            display.textContent = current;
+        }
+        else if (current === '0') {
+            current = '9';
+            display.textContent = current;
+        } else {
+            current += '9';
+            display.textContent = current;
+        }
+    } else if (e.key === '0') {
+        if (current.length >= 20) {
+            display.textContent = current;
+        }
+        else if (current === '0') {
+            current = '0';
+            display.textContent = current;
+        } else {
+            current += '0';
+            display.textContent = current;
+        }
+    } else if (e.key === '.') {
+        if (display.textContent.includes('.')) {
+            display.textContent = current;
+        }
+        else if (current.length >= 20) {
+            display.textContent = current;
+        } else if (current === '0') {
+            current = '0.';
+            display.textContent = current;
+        } else {
+            current += '.';
+            display.textContent = current;
+        }
+    } else if (e.key === '+') {
+        if (operator === '') {
+            previous = display.textContent;
+            current = '0';
+            operator = 'add';
+        } else if (operator === 'add') {
+            previous = add(previous, current);
+            current = '0';
+            operator = 'add';
+            display.textContent = previous;
+        } else if (operator === 'subtract') {
+            previous = subtract(previous, current);
+            current = '0';
+            operator = 'add';
+            display.textContent = previous;
+        } else if (operator === 'multiply') {
+            previous = multiply(previous, current);
+            current = '0';
+            operator = 'add';
+            display.textContent = previous;
+        } else if (operator === 'divide') {
+            if (current !== '0') {
+                previous = divide(previous, current);
+                current = '0';
+                operator = 'add';
+                display.textContent = previous;
+            } else if (current === '0') {
+                display.textContent = 'I refuse to divide by 0';
+            }
+        }
+    } else if(e.key === '-'){
+        if (operator === '') {
+            previous = display.textContent;
+            current = '0';
+            operator = 'subtract';
+        } else if (operator === 'add') {
+            previous = add(previous, current);
+            current = '0';
+            operator = 'subtract';
+            display.textContent = previous;
+        } else if (operator === 'subtract') {
+            previous = subtract(previous, current);
+            current = '0';
+            operator = 'subtract';
+            display.textContent = previous;
+        } else if (operator === 'multiply') {
+            previous = multiply(previous, current);
+            current = '0';
+            operator = 'subtract';
+            display.textContent = previous;
+        } else if (operator === 'divide') {
+            if (current !== '0') {
+                previous = divide(previous, current);
+                current = '0';
+                operator = 'subtract';
+                display.textContent = previous;
+            } else if (current === '0') {
+                display.textContent = 'I refuse to divide by 0';
+            }
+        }
+    } else if (e.key === '*'){
+        if (operator === '') {
+            previous = display.textContent;
+            current = '0';
+            operator = 'multiply';
+        } else if (operator === 'add') {
+            previous = add(previous, current);
+            current = '0';
+            operator = 'multiply';
+            display.textContent = previous;
+        } else if (operator === 'subtract') {
+            previous = subtract(previous, current);
+            current = '0';
+            operator = 'multiply';
+            display.textContent = previous;
+        } else if (operator === 'multiply') {
+            previous = multiply(previous, current);
+            current = '0';
+            operator = 'multiply';
+            display.textContent = previous;
+        } else if (operator === 'divide') {
+            if (current !== '0') {
+                previous = divide(previous, current);
+                current = '0';
+                operator = 'multiply';
+                display.textContent = previous;
+            } else if (current === '0') {
+                display.textContent = 'I refuse to divide by 0';
+            }
+        }
+    } else if (e.key === '/'){
+        if (operator === '') {
+            previous = display.textContent;
+            current = '0';
+            operator = 'divide';
+        } else if (operator === 'add') {
+            previous = add(previous, current);
+            current = '0';
+            operator = 'divide';
+            display.textContent = previous;
+        } else if (operator === 'subtract') {
+            previous = subtract(previous, current);
+            current = '0';
+            operator = 'divide';
+            display.textContent = previous;
+        } else if (operator === 'multiply') {
+            previous = multiply(previous, current);
+            current = '0';
+            operator = 'divide';
+            display.textContent = previous;
+        } else if (operator === 'divide') {
+            if (current !== '0') {
+                previous = divide(previous, current);
+                current = '0';
+                operator = 'divide';
+                display.textContent = previous;
+            } else if (current === '0') {
+                display.textContent = 'I refuse to divide by 0';
+            }
+        }
+    } else if (e.key === '='){
+        if (operator === '') {
+            previous = display.textContent;
+            current = '0'
+            operator = '';
+        } else if (operator === 'add') {
+            previous = add(previous, current);
+            current = '0';
+            operator = '';
+            display.textContent = previous;
+        } else if (operator === 'subtract') {
+            previous = subtract(previous, current);
+            current = '0';
+            operator = '';
+            display.textContent = previous;
+        } else if (operator === 'multiply') {
+            previous = multiply(previous, current);
+            current = '0';
+            operator = '';
+            display.textContent = previous;
+        } else if (operator === 'divide') {
+            if (current !== '0') {
+                previous = divide(previous, current);
+                current = '0';
+                operator = '';
+                display.textContent = previous;
+            } else if (current === '0') {
+                display.textContent = 'I refuse to divide by 0';
+            }
+        }
+    } else if (e.key === 'Delete'){
+        previous = '';
+        current = '';
+        operator = '';
+        display.textContent = '0';
+    } else if (e.key === 'Backspace'){
+        if (display.textContent.length !== 1) {
+            current = display.textContent.slice(0, -1);
+            display.textContent = current;
+        } else {
+            current = '0';
+            display.textContent = current;
+        }
     }
 });

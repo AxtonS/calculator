@@ -1,11 +1,12 @@
 # Calculator  
 
-Basic calculator app, part of The Odin Project lessons.  
+Basic calculator app  
 
 ### Current stage:  
 
-Final build  
-Update: Adding keyboard support  
+Fully functional!  
+
+Update: Polishing the look of the calculator  
 
 ### Current features:  
 
@@ -18,7 +19,4 @@ Update: Adding keyboard support
 -Prevent divide by 0 crashes  
 -Added a round to 2 decimal places on big numbers  
 -Added a backspace button  
-
-### Planned updates:  
-
--Polish the look of the calculator
+-Added keyboard support
