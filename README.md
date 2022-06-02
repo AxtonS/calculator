@@ -4,8 +4,7 @@ Basic calculator app, part of The Odin Project lessons.
 
 ### Current stage:  
 
-Final features:  
--Should be able to string together operations pre equals operations  
+Final features:    
 -Round answers to display length  
 -Prevent divide by 0 crashes  
 
@@ -16,6 +15,7 @@ Final features:
 -Created the HTML skeleton for the calculator, minimal styling, labelled all the buttons, put a display element  
 -Built the button click functions to print to display  
 -Built functions into operator and clear buttons  
+-Built logic to string together functions  
 
 ### Roadmap to launch:  
 
