@@ -1,6 +1,7 @@
 # Calculator  
 
 Basic calculator app  
+Try it out at: https://axtons.github.io/calculator/
 
 ### Current stage:  
 
